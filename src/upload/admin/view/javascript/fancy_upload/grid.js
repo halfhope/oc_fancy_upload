@@ -502,8 +502,8 @@ const _delegateDragAndDropEvents = function () {
 		document.querySelector(_containerSelector).addEventListener(eventName, _containerDrag);
 	});
 	
-	let fuOverlay = document.querySelector(_containerSelector + ' .fu-overlay'); 
-	if (fuOverlay !== null) {
+	let fancyOverlay = document.querySelector(_containerSelector + ' .fu-overlay'); 
+	if (fancyOverlay !== null) {
 		document.querySelector(_containerSelector + ' .fu-overlay').addEventListener('dragleave', _containerDragLeave);
 		document.querySelector(_containerSelector + ' .fu-overlay').addEventListener('drop', _containerDrop);
 	}
@@ -513,8 +513,8 @@ const _undelegateDragAndDropEvents = function () {
 		document.querySelector(_containerSelector).removeEventListener(eventName, _containerDrag);
 	});
 	
-	let fuOverlay = document.querySelector(_containerSelector + ' .fu-overlay'); 
-	if (fuOverlay !== null) {
+	let fancyOverlay = document.querySelector(_containerSelector + ' .fu-overlay'); 
+	if (fancyOverlay !== null) {
 		document.querySelector(_containerSelector + ' .fu-overlay').removeEventListener('dragleave', _containerDragLeave);
 		document.querySelector(_containerSelector + ' .fu-overlay').removeEventListener('drop', _containerDrop);
 	}
@@ -597,7 +597,7 @@ const _setOptions = (options) => {
 };
 
 
-export const fuGrid = {
+export const fancyGrid = {
 	init: (options) => {
 		_setOptions(options);
 	},

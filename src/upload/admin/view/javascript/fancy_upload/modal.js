@@ -113,7 +113,7 @@ const _setOptions = (options)  => {
 	_language.button_close = options.button_close || 'Close';
 }
 
-export const fuModal = {
+export const fancyModal = {
 	init: (options) => {
 		_setOptions(options);
 		
