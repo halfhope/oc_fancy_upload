@@ -716,7 +716,7 @@ class ControllerExtensionModuleFancyUpload extends Controller {
 	
 	public function eventAddScripts(&$route, &$args) {
 		if (!$this->user->hasPermission('view', $this->_route)) {
-			$this->document->addStyle('view/javascript/fancy_upload/fu-form.css?v=' . $this->_version);
+			$this->document->addStyle('view/javascript/fancy_upload/form.css?v=' . $this->_version);
 
 			$this->document->addScript('view/javascript/fancy_upload/sortable.js?v=' . $this->_version);
 		}
@@ -788,9 +788,9 @@ class ControllerExtensionModuleFancyUpload extends Controller {
 			$script = "
 			<script type=\"module\">
 			\"use strict\";
-			import { App } from '/admin/view/javascript/fancy_upload/fu-app.js';
+			import { App } from '/admin/view/javascript/fancy_upload/app.js';
 
-			var fu_data = ${json};
+			var fu_data = $json;
 			window.addEventListener(\"load\", (event) => {
 				App.init(fu_data);
 			});

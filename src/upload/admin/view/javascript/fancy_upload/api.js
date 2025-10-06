@@ -46,7 +46,7 @@ const _setOptions = (options) => {
 	_token 				= options.token || '';
 };
 
-export const fuApi = {
+export const fancyApi = {
 	init: (options) => {
 		_setOptions(options);
 	},

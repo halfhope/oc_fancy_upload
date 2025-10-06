@@ -188,7 +188,7 @@ const _setOptions = (options) => {
 		_productNameSelector = options.productNameSelector || ''
 };
 
-export const fuProductList = {
+export const fancyProductList = {
 	init: (options) => {
 		_setOptions(options);
 		

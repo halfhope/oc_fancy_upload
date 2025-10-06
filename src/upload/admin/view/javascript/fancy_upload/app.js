@@ -1,10 +1,10 @@
 'use strict';
 
-import { fuProductList } from "./fu-product-list.js";
-import { fuModal } from "./fu-modal.js";
-import { fuGrid } from "./fu-grid.js";
-import { fuApi } from "./fu-api.js";
-import { fuDropzone } from "./fu-dropzone.js";
+import { fancyProductList } from "./product-list.js";
+import { fancyModal } from "./modal.js";
+import { fancyGrid } from "./grid.js";
+import { fancyApi } from "./api.js";
+import { fancyDropzone } from "./dropzone.js";
 
 export const App = {
 
@@ -15,18 +15,18 @@ export const App = {
 		let currentImagePath = '';
 		// init
 	
-		let dropzone = fuDropzone;
+		let dropzone = fancyDropzone;
 	
-		let productList = fuProductList;
+		let productList = fancyProductList;
 		productList.init(fu_data.list);
 	
-		let modal = fuModal;
+		let modal = fancyModal;
 		modal.init(fu_data.modal);
 	
-		let api = fuApi;
+		let api = fancyApi;
 		api.init(fu_data.api);
 	
-		let grid = fuGrid;
+		let grid = fancyGrid;
 		fu_data.grid.containerSelector = modal.getContainerSelector();
 		grid.init(fu_data.grid);
 	
@@ -81,7 +81,7 @@ export const App = {
 	
 		};
 		
-		// fuProductList
+		// fancyProductList
 			// list.image.click 	=> ({e, item});
 			// list.row.drop 		=> ({e, item, formData});
 			// list.row.active 		=> (item);
@@ -154,7 +154,7 @@ export const App = {
 			}
 		});
 	
-		// fuApi
+		// fancyApi
 			// 'api.upload.progress', 	(progress)
 			// 'api.error',			 	(e)
 		api.subscribe('api.upload.progress', (progress) => {
@@ -181,7 +181,7 @@ export const App = {
 			console.log(e);
 		});
 	
-		// fuModal
+		// fancyModal
 		// modal.button.click	=> ({e, action})
 		// modal.show 			=> (e)
 		// modal.hide			=> (e)
@@ -260,7 +260,7 @@ export const App = {
 			}
 		});
 	
-		// fuGrid
+		// fancyGrid
 		// formdata.change 		=> (formData)
 	
 		// panel.images.remove 		=> ({e, tmp})

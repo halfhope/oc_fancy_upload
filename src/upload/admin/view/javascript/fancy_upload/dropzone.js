@@ -160,7 +160,7 @@ const _getDroppedOrSelectedFiles = (event) => {
     return Promise.resolve(files);
 }
 
-export const fuDropzone = {
+export const fancyDropzone = {
     getDroppedOrSelectedFiles: (e) => {
         return _getDroppedOrSelectedFiles(e);
     },
